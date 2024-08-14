@@ -25,7 +25,7 @@ Multi language,
 dark and ligt theme,
 all chapters wit it's translation English and gujrati;
 ## 📲 Screenshots
-
+<p>
 <img align="left" src="https://github.com/Ponik90/departure/assets/156168435/a841f78e-3c20-4bbc-b738-77edac4918ca" width="220px">
 <img align="left" src="https://github.com/Ponik90/departure/assets/156168435/56d495b1-7090-434f-93d7-60b504d47190" width="220px">
 <img src="https://github.com/Ponik90/departure/assets/156168435/95292a16-43af-4e98-b9bd-8bfcd2a0d0d7" width="220px">
@@ -34,7 +34,7 @@ all chapters wit it's translation English and gujrati;
 <img src="https://github.com/Ponik90/departure/assets/156168435/3b37b964-87f9-483d-9de5-bbf4f1395756" width="220px">
 <img align="left" src="https://github.com/Ponik90/departure/assets/156168435/2657255d-240d-4ea0-a1ae-8c1f346f35c2" width="220px">
 <img align="left" src="https://github.com/Ponik90/departure/assets/156168435/4423b97a-9aab-44e0-9801-1171c0f293a4" width="220px">
-
+</p>
 
 <br><br>
 

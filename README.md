@@ -1,5 +1,6 @@
 <div align="center">
-<img src="./assets/feature_graphic/feature_graphic.png">
+<img src="https://github.com/user-attachments/assets/f97ff09c-fc43-4661-b2f8-6fecbb6c9773">
+
 
 
 # **Bhagvat Gita App**

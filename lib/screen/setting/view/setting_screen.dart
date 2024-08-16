@@ -1,7 +1,8 @@
 import 'package:departure/screen/setting/provider/setting_provider.dart';
-import 'package:departure/screen/utils/shared_preference/shared_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../../../utils/shared_preference/shared_helper.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({super.key});

@@ -1,5 +1,6 @@
-import 'package:departure/screen/utils/shared_preference/shared_helper.dart';
 import 'package:flutter/material.dart';
+
+import '../../../utils/shared_preference/shared_helper.dart';
 
 class SettingProvider with ChangeNotifier {
   bool isTheme = true;
@@ -7,7 +8,14 @@ class SettingProvider with ChangeNotifier {
 
   Future<void> changeTheme() async {
     SharedHelper shr = SharedHelper();
-    isTheme = await shr.getThemeData();
+    if(await shr.getThemeData() != null)
+      {
+        isTheme = (await shr.getThemeData())!;
+      }
+    else
+    {
+      isTheme = true;
+    }
     notifyListeners();
   }
 

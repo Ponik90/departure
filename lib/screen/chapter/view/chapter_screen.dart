@@ -1,3 +1,4 @@
+import 'package:departure/screen/chapter/provider/chapter_provider.dart';
 import 'package:departure/screen/home/model/home_model.dart';
 import 'package:departure/screen/setting/provider/setting_provider.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,9 @@ class _ChapterScreenState extends State<ChapterScreen> {
   SettingProvider? providerSR;
   SettingProvider? providerSW;
 
+  ChapterProvider? providerCR;
+  ChapterProvider? providerCW;
+
   @override
   void initState() {
     super.initState();
@@ -34,6 +38,9 @@ class _ChapterScreenState extends State<ChapterScreen> {
 
     providerSR = context.read<SettingProvider>();
     providerSW = context.watch<SettingProvider>();
+
+    providerCW = context.watch<ChapterProvider>();
+    providerCR = context.read<ChapterProvider>();
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -41,7 +48,16 @@ class _ChapterScreenState extends State<ChapterScreen> {
       ),
       body: Column(
         children: [
-          Image.network(m1.url!),
+          m1.url!.isEmpty || m1.url == null
+              ? const SizedBox()
+              : SizedBox(
+                  height: 400,
+                  width: MediaQuery.sizeOf(context).width,
+                  child: Image.network(
+                    m1.url!,
+                    fit: BoxFit.cover,
+                  ),
+                ),
           Expanded(
             child: ListView.builder(
               itemCount: providerSW!.language == "english"
@@ -51,6 +67,13 @@ class _ChapterScreenState extends State<ChapterScreen> {
                       : m1.verses!.length,
               itemBuilder: (context, index) {
                 return ListTile(
+                  onTap: () {
+                    providerSW!.language == "english"
+                        ? providerCR!.setLikeData(m1.english![index])
+                        : providerSW!.language == "gujrati"
+                            ? providerCR!.setLikeData(m1.gujrati![index])
+                            : providerCR!.setLikeData(m1.verses![index]);
+                  },
                   title: Text(
                       "${providerSW!.language == "english" ? m1.english![index] : providerSW!.language == "gujrati" ? m1.gujrati![index] : m1.verses![index]}"),
                 );

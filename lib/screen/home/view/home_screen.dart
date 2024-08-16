@@ -41,6 +41,12 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, 'like');
+            },
+            icon: const Icon(Icons.favorite),
+          ),
+          IconButton(
             onPressed: () {},
             icon: IconButton(
               onPressed: () {

@@ -1,6 +1,6 @@
-import 'package:departure/screen/utils/helper/json_helper.dart';
 import 'package:flutter/material.dart';
 
+import '../../../utils/helper/json_helper.dart';
 import '../model/home_model.dart';
 
 class HomeProvider with ChangeNotifier
